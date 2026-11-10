@@ -103,7 +103,7 @@ function VillasContent() {
                 {/* Price & Action */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-gold-500/20">
                   <div className="text-start">
-                    <span className="text-[10px] text-sand-200/50 uppercase tracking-widest block">{isRTL ? 'תעריף ללילה' : 'Tariff'}</span>
+                    <span className="text-[10px] text-sand-200/50 uppercase tracking-widest block">{isRTL ? 'תעריף ללילה' : 'Nightly Tariff'}</span>
                     <bdi className="font-serif text-2xl text-gold-300 font-semibold">{villa.rate}</bdi>
                   </div>
                   <a
