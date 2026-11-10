@@ -2,11 +2,13 @@
 
 import { useEffect, useRef } from 'react';
 import { ArrowDown, Sparkles } from 'lucide-react';
+import { useLanguage } from './LanguageContext';
 
 export default function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     import('gsap').then(({ default: gsap }) => {
@@ -53,7 +55,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 text-gold-400 uppercase tracking-[0.4em] text-xs font-semibold px-4 py-2 rounded-full border border-gold-500/30 bg-emerald-900/40 backdrop-blur-md mb-8"
         >
           <Sparkles className="w-3.5 h-3.5" />
-          The Archipelago of Pure Serenity
+          {t.hero.eyebrow}
         </p>
 
         {/* Hero Title */}
@@ -61,14 +63,14 @@ export default function Hero() {
           ref={titleRef}
           className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight text-sand-50 font-light leading-[1.08] mb-8"
         >
-          Where Untamed Nature <br />
+          {t.hero.titleLine1} <br />
           <span className="italic font-normal bg-gradient-to-r from-gold-300 via-gold-400 to-amber-200 bg-clip-text text-transparent">
-            Meets Timeless Opulence
+            {t.hero.titleLine2}
           </span>
         </h1>
 
         <p className="max-w-2xl mx-auto text-sand-200/90 text-base md:text-lg font-light leading-relaxed mb-12">
-          Immerse in private island sanctuaries, cliff-edge infinity villas, and secluded tropical rainforest retreats across the world’s most pristine Indonesian paradises.
+          {t.hero.description}
         </p>
 
         {/* CTA Buttons */}
@@ -77,20 +79,20 @@ export default function Hero() {
             href="#resorts"
             className="w-full sm:w-auto px-10 py-4 rounded-full text-xs uppercase tracking-[0.25em] font-bold text-emerald-950 bg-gradient-to-r from-gold-300 via-gold-400 to-gold-500 hover:shadow-[0_0_40px_rgba(229,195,101,0.5)] transition-all duration-300 transform hover:-translate-y-1"
           >
-            Explore Sanctuaries
+            {t.hero.exploreBtn}
           </a>
           <a
             href="#experiences"
             className="w-full sm:w-auto px-10 py-4 rounded-full text-xs uppercase tracking-[0.25em] font-medium text-sand-100 border border-gold-400/40 hover:border-gold-300 hover:bg-gold-500/10 backdrop-blur-sm transition-all duration-300"
           >
-            Private Expeditions
+            {t.hero.expeditionsBtn}
           </a>
         </div>
       </div>
 
       {/* Floating Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-gold-400/70 text-[10px] tracking-[0.3em] uppercase">
-        <span>Scroll to Discover</span>
+        <span>{t.hero.scrollText}</span>
         <ArrowDown className="w-4 h-4 animate-bounce text-gold-400" />
       </div>
     </section>
