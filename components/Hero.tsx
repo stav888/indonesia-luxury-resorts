@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react';
 import { ArrowDown, Sparkles } from 'lucide-react';
-import gsap from 'gsap';
 
 export default function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -10,26 +9,28 @@ export default function Hero() {
   const ctaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!titleRef.current || !subtitleRef.current || !ctaRef.current) return;
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    import('gsap').then(({ default: gsap }) => {
+      if (!titleRef.current || !subtitleRef.current || !ctaRef.current) return;
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    tl.fromTo(
-      subtitleRef.current,
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 1, delay: 0.3 }
-    )
-      .fromTo(
-        titleRef.current,
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 1.2 },
-        '-=0.6'
+      tl.fromTo(
+        subtitleRef.current,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 1, delay: 0.3 }
       )
-      .fromTo(
-        ctaRef.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        '-=0.5'
-      );
+        .fromTo(
+          titleRef.current,
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 1.2 },
+          '-=0.6'
+        )
+        .fromTo(
+          ctaRef.current,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8 },
+          '-=0.5'
+        );
+    });
   }, []);
 
   return (
