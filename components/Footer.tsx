@@ -1,6 +1,6 @@
 'use client';
 
-import { Compass, Instagram, Phone, Mail, Shield } from 'lucide-react';
+import { Compass, Phone, Mail, Shield } from 'lucide-react';
 
 export default function Footer() {
   return (

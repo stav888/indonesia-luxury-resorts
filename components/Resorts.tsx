@@ -1,6 +1,6 @@
 'use client';
 
-import { Star, ShieldCheck, Waves, Sparkles } from 'lucide-react';
+import { Star, Sparkles } from 'lucide-react';
 
 const resorts = [
   {

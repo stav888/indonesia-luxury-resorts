@@ -10,6 +10,7 @@ export default function Hero() {
   const ctaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!titleRef.current || !subtitleRef.current || !ctaRef.current) return;
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
     tl.fromTo(
