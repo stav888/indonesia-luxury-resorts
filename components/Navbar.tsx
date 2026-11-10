@@ -16,9 +16,9 @@ export default function Navbar() {
           <div className="w-10 h-10 rounded-full border border-gold-400 flex items-center justify-center text-gold-400 group-hover:bg-gold-500 group-hover:text-emerald-950 transition-colors">
             <Compass className="w-5 h-5 animate-pulse" />
           </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-2xl tracking-[0.25em] text-sand-50 font-medium">NUSANTARA</span>
-            <span className="text-[10px] tracking-[0.4em] text-gold-400 uppercase -mt-1 font-sans">
+          <div className="flex flex-col text-start">
+            <span className="font-serif text-xl sm:text-2xl tracking-[0.2em] sm:tracking-[0.25em] text-sand-50 font-medium">NUSANTARA</span>
+            <span className="text-[9px] sm:text-[10px] tracking-[0.3em] sm:tracking-[0.4em] text-gold-400 uppercase -mt-1 font-sans">
               {language === 'he' ? 'נוסנטארה • אינדונזיה' : 'SANCTUARY • INDONESIA'}
             </span>
           </div>
@@ -76,11 +76,11 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {isOpen && (
-        <div className="md:hidden bg-emerald-950/95 border-b border-gold-500/20 px-6 py-8 flex flex-col gap-6 text-sm tracking-[0.2em] uppercase">
-          <a href="/#destinations" onClick={() => setIsOpen(false)} className="text-sand-100 hover:text-gold-400">{t.nav.destinations}</a>
-          <a href="/#resorts" onClick={() => setIsOpen(false)} className="text-sand-100 hover:text-gold-400">{t.nav.sanctuaries}</a>
-          <a href="/journeys" onClick={() => setIsOpen(false)} className="text-sand-100 hover:text-gold-400">{t.nav.journeys}</a>
-          <a href="/villas" onClick={() => setIsOpen(false)} className="text-sand-100 hover:text-gold-400">{t.nav.villas}</a>
+        <div className="md:hidden bg-emerald-950/95 border-b border-gold-500/20 px-6 py-8 flex flex-col gap-6 text-sm tracking-[0.2em] uppercase text-start">
+          <a href="/#destinations" onClick={() => setIsOpen(false)} className="text-sand-100 hover:text-gold-400 text-start">{t.nav.destinations}</a>
+          <a href="/#resorts" onClick={() => setIsOpen(false)} className="text-sand-100 hover:text-gold-400 text-start">{t.nav.sanctuaries}</a>
+          <a href="/journeys" onClick={() => setIsOpen(false)} className="text-sand-100 hover:text-gold-400 text-start">{t.nav.journeys}</a>
+          <a href="/villas" onClick={() => setIsOpen(false)} className="text-sand-100 hover:text-gold-400 text-start">{t.nav.villas}</a>
           <a
             href="#booking"
             onClick={() => setIsOpen(false)}

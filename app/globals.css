@@ -12,8 +12,25 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-montserrat), sans-serif;
+  font-family: 'Montserrat', -apple-system, sans-serif;
   overflow-x: hidden;
+  text-align: start;
+}
+
+/* Ensure RTL text and icons align correctly */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="ltr"] {
+  text-align: left;
+}
+
+/* Prevent BiDi text jumble in currency & numbers */
+bdi, .bdi-isolate {
+  unicode-bidi: isolate;
+  direction: ltr;
+  display: inline-block;
 }
 
 /* Luxury Smooth Scroll */

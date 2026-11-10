@@ -14,17 +14,17 @@ export default function BookingSection() {
   };
 
   return (
-    <section id="booking" className="py-28 px-6 max-w-5xl mx-auto">
-      <div className="relative rounded-3xl p-8 md:p-16 bg-gradient-to-b from-emerald-900/60 via-emerald-950 to-emerald-950 border border-gold-500/30 shadow-[0_0_80px_rgba(3,26,20,0.8)] overflow-hidden">
+    <section id="booking" className="py-14 sm:py-28 px-4 sm:px-6 max-w-5xl mx-auto">
+      <div className="relative rounded-3xl p-6 sm:p-12 md:p-16 bg-gradient-to-b from-emerald-900/60 via-emerald-950 to-emerald-950 border border-gold-500/30 shadow-[0_0_80px_rgba(3,26,20,0.8)] overflow-hidden">
         {/* Subtle Gold Background Accents */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-800/20 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 text-center max-w-2xl mx-auto mb-12">
+        <div className="relative z-10 text-center max-w-2xl mx-auto mb-10 sm:mb-12">
           <span className="text-gold-400 uppercase tracking-[0.35em] text-xs font-semibold block mb-3">
             {t.booking.badge}
           </span>
-          <h2 className="font-serif text-3xl md:text-5xl text-sand-50 font-light mb-4">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-sand-50 font-light mb-4">
             {t.booking.title}
           </h2>
           <p className="text-sand-200/80 text-sm font-light leading-relaxed">
@@ -47,61 +47,64 @@ export default function BookingSection() {
             </button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="relative z-10 max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-xs uppercase tracking-widest text-gold-400/90 mb-2 font-medium">
+          <form onSubmit={handleSubmit} className="relative z-10 max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 text-start">
+            <div className="text-start">
+              <label className="block text-xs uppercase tracking-widest text-gold-400/90 mb-2 font-medium text-start">
                 {t.booking.fullName}
               </label>
               <input
                 type="text"
                 required
+                dir="auto"
                 placeholder={t.booking.fullNamePlaceholder}
-                className="w-full bg-emerald-950/90 border border-gold-500/30 rounded-xl px-4 py-3.5 text-sand-100 text-sm focus:outline-none focus:border-gold-400 transition-colors"
+                className="w-full bg-emerald-950/90 border border-gold-500/30 rounded-xl px-4 py-3.5 text-sand-100 text-sm focus:outline-none focus:border-gold-400 transition-colors text-start"
               />
             </div>
 
-            <div>
-              <label className="block text-xs uppercase tracking-widest text-gold-400/90 mb-2 font-medium">
+            <div className="text-start">
+              <label className="block text-xs uppercase tracking-widest text-gold-400/90 mb-2 font-medium text-start">
                 {t.booking.email}
               </label>
               <input
                 type="email"
                 required
+                dir="auto"
                 placeholder={t.booking.emailPlaceholder}
-                className="w-full bg-emerald-950/90 border border-gold-500/30 rounded-xl px-4 py-3.5 text-sand-100 text-sm focus:outline-none focus:border-gold-400 transition-colors"
+                className="w-full bg-emerald-950/90 border border-gold-500/30 rounded-xl px-4 py-3.5 text-sand-100 text-sm focus:outline-none focus:border-gold-400 transition-colors text-start"
               />
             </div>
 
-            <div>
-              <label className="block text-xs uppercase tracking-widest text-gold-400/90 mb-2 font-medium">
+            <div className="text-start">
+              <label className="block text-xs uppercase tracking-widest text-gold-400/90 mb-2 font-medium text-start">
                 {t.booking.destination}
               </label>
-              <select className="w-full bg-emerald-950/90 border border-gold-500/30 rounded-xl px-4 py-3.5 text-sand-100 text-sm focus:outline-none focus:border-gold-400 transition-colors">
+              <select dir="auto" className="w-full bg-emerald-950/90 border border-gold-500/30 rounded-xl px-4 py-3.5 text-sand-100 text-sm focus:outline-none focus:border-gold-400 transition-colors text-start">
                 {t.booking.destOptions.map((opt, oIdx) => (
                   <option key={oIdx}>{opt}</option>
                 ))}
               </select>
             </div>
 
-            <div>
-              <label className="block text-xs uppercase tracking-widest text-gold-400/90 mb-2 font-medium">
+            <div className="text-start">
+              <label className="block text-xs uppercase tracking-widest text-gold-400/90 mb-2 font-medium text-start">
                 {t.booking.partySize}
               </label>
-              <select className="w-full bg-emerald-950/90 border border-gold-500/30 rounded-xl px-4 py-3.5 text-sand-100 text-sm focus:outline-none focus:border-gold-400 transition-colors">
+              <select dir="auto" className="w-full bg-emerald-950/90 border border-gold-500/30 rounded-xl px-4 py-3.5 text-sand-100 text-sm focus:outline-none focus:border-gold-400 transition-colors text-start">
                 {t.booking.partyOptions.map((opt, oIdx) => (
                   <option key={oIdx}>{opt}</option>
                 ))}
               </select>
             </div>
 
-            <div className="md:col-span-2">
-              <label className="block text-xs uppercase tracking-widest text-gold-400/90 mb-2 font-medium">
+            <div className="md:col-span-2 text-start">
+              <label className="block text-xs uppercase tracking-widest text-gold-400/90 mb-2 font-medium text-start">
                 {t.booking.notes}
               </label>
               <textarea
                 rows={3}
+                dir="auto"
                 placeholder={t.booking.notesPlaceholder}
-                className="w-full bg-emerald-950/90 border border-gold-500/30 rounded-xl px-4 py-3.5 text-sand-100 text-sm focus:outline-none focus:border-gold-400 transition-colors resize-none"
+                className="w-full bg-emerald-950/90 border border-gold-500/30 rounded-xl px-4 py-3.5 text-sand-100 text-sm focus:outline-none focus:border-gold-400 transition-colors resize-none text-start"
               />
             </div>
 

@@ -14,26 +14,26 @@ export default function Destinations() {
   const { t, isRTL } = useLanguage();
 
   return (
-    <section id="destinations" className="py-28 px-6 max-w-7xl mx-auto">
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 border-b border-gold-500/20 pb-8">
-        <div>
-          <span className="text-gold-400 uppercase tracking-[0.3em] text-xs font-semibold block mb-3">
+    <section id="destinations" className="py-14 sm:py-28 px-4 sm:px-6 max-w-7xl mx-auto">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6 border-b border-gold-500/20 pb-8 text-start">
+        <div className="text-start">
+          <span className="text-gold-400 uppercase tracking-[0.3em] text-xs font-semibold block mb-3 text-start">
             {t.destinations.tag}
           </span>
-          <h2 className="font-serif text-4xl md:text-6xl text-sand-50 font-light">
+          <h2 className="font-serif text-3xl sm:text-5xl md:text-6xl text-sand-50 font-light text-start">
             {t.destinations.title}
           </h2>
         </div>
-        <p className="text-sand-200/70 max-w-md text-sm leading-relaxed font-light">
+        <p className="text-sand-200/70 max-w-md text-sm leading-relaxed font-light text-start">
           {t.destinations.subtitle}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {t.destinations.items.map((dest, i) => (
           <div
             key={i}
-            className="group relative rounded-2xl overflow-hidden bg-emerald-900/30 border border-gold-500/20 hover:border-gold-400/60 transition-all duration-500 flex flex-col h-[460px] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
+            className="group relative rounded-2xl overflow-hidden bg-emerald-900/30 border border-gold-500/20 hover:border-gold-400/60 transition-all duration-500 flex flex-col h-[420px] sm:h-[460px] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)]"
           >
             {/* Image */}
             <div className="absolute inset-0 z-0">
@@ -46,25 +46,25 @@ export default function Destinations() {
             </div>
 
             {/* Tag */}
-            <div className="relative z-10 p-6 flex justify-between items-start">
+            <div className="relative z-10 p-5 sm:p-6 flex justify-between items-start">
               <span className="text-[10px] tracking-[0.25em] uppercase text-emerald-950 bg-gold-400 font-bold px-3 py-1 rounded-full">
                 {dest.tag}
               </span>
             </div>
 
             {/* Content Bottom */}
-            <div className="relative z-10 mt-auto p-6 flex flex-col gap-2">
-              <div className="flex items-center gap-1.5 text-gold-300 text-xs">
-                <MapPin className="w-3.5 h-3.5" />
+            <div className="relative z-10 mt-auto p-5 sm:p-6 flex flex-col gap-2 text-start">
+              <div className="flex items-center gap-1.5 text-gold-300 text-xs text-start">
+                <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
                 <span>{isRTL ? 'אינדונזיה' : 'Indonesia'}</span>
               </div>
-              <h3 className="font-serif text-2xl text-sand-50 font-medium group-hover:text-gold-300 transition-colors">
+              <h3 className="font-serif text-xl sm:text-2xl text-sand-50 font-medium group-hover:text-gold-300 transition-colors text-start">
                 {dest.title}
               </h3>
-              <p className="text-sand-200/80 text-xs leading-relaxed font-light mb-2">
+              <p className="text-sand-200/80 text-xs leading-relaxed font-light mb-2 text-start">
                 {dest.desc}
               </p>
-              <div className="flex items-center gap-2 text-gold-400 text-xs uppercase tracking-widest font-semibold pt-2 border-t border-gold-500/15">
+              <div className="flex items-center gap-2 text-gold-400 text-xs uppercase tracking-widest font-semibold pt-2 border-t border-gold-500/15 text-start">
                 <span>{t.destinations.discover}</span>
                 <ArrowRight className={`w-3.5 h-3.5 transition-transform ${isRTL ? 'group-hover:-translate-x-1 rotate-180' : 'group-hover:translate-x-1'}`} />
               </div>
