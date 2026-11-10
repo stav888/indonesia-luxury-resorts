@@ -38,10 +38,10 @@ export default function Footer() {
         <div>
           <h4 className="text-xs uppercase tracking-[0.25em] text-gold-400 font-semibold mb-4">{t.footer.expeditionsTitle}</h4>
           <ul className="space-y-2 text-xs text-sand-200/70 font-light">
-            <li><a href="#experiences" className="hover:text-gold-400 transition-colors">Private Yacht Charters (Phinisi)</a></li>
-            <li><a href="#experiences" className="hover:text-gold-400 transition-colors">Komodo Dragon Guided Treks</a></li>
-            <li><a href="#experiences" className="hover:text-gold-400 transition-colors">Whale Shark Marine Dives</a></li>
-            <li><a href="#experiences" className="hover:text-gold-400 transition-colors">Helicopter Caldera Flyovers</a></li>
+            <li><a href="/journeys" className="hover:text-gold-400 transition-colors">Private Yacht Charters (Phinisi)</a></li>
+            <li><a href="/journeys" className="hover:text-gold-400 transition-colors">Komodo Dragon Guided Treks</a></li>
+            <li><a href="/journeys" className="hover:text-gold-400 transition-colors">Whale Shark Marine Dives</a></li>
+            <li><a href="/journeys" className="hover:text-gold-400 transition-colors">Helicopter Caldera Flyovers</a></li>
           </ul>
         </div>
 

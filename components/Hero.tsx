@@ -82,7 +82,7 @@ export default function Hero() {
             {t.hero.exploreBtn}
           </a>
           <a
-            href="#experiences"
+            href="/journeys"
             className="w-full sm:w-auto px-10 py-4 rounded-full text-xs uppercase tracking-[0.25em] font-medium text-sand-100 border border-gold-400/40 hover:border-gold-300 hover:bg-gold-500/10 backdrop-blur-sm transition-all duration-300"
           >
             {t.hero.expeditionsBtn}
