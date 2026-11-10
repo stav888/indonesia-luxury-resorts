@@ -53,18 +53,18 @@ export default function Destinations() {
             </div>
 
             {/* Content Bottom */}
-            <div className="relative z-10 mt-auto p-5 sm:p-6 flex flex-col gap-2 text-start">
+            <div className="relative z-10 mt-auto p-5 sm:p-6 flex flex-col gap-2 text-start flex-grow justify-end">
               <div className="flex items-center gap-1.5 text-gold-300 text-xs text-start">
                 <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
-                <span>{isRTL ? 'אינדונזיה' : 'Indonesia'}</span>
+                <span className="text-start">{isRTL ? 'אינדונזיה' : 'Indonesia'}</span>
               </div>
-              <h3 className="font-serif text-xl sm:text-2xl text-sand-50 font-medium group-hover:text-gold-300 transition-colors text-start">
+              <h3 className="font-serif text-xl sm:text-2xl text-sand-50 font-medium group-hover:text-gold-300 transition-colors text-start min-h-[3.5rem] flex items-center">
                 {dest.title}
               </h3>
-              <p className="text-sand-200/80 text-xs leading-relaxed font-light mb-2 text-start">
+              <p className="text-sand-200/80 text-xs leading-relaxed font-light mb-2 text-start min-h-[3.5rem]">
                 {dest.desc}
               </p>
-              <div className="flex items-center gap-2 text-gold-400 text-xs uppercase tracking-widest font-semibold pt-2 border-t border-gold-500/15 text-start">
+              <div className="flex items-center gap-2 text-gold-400 text-xs uppercase tracking-widest font-semibold pt-2 border-t border-gold-500/15 text-start mt-auto">
                 <span>{t.destinations.discover}</span>
                 <ArrowRight className={`w-3.5 h-3.5 transition-transform ${isRTL ? 'group-hover:-translate-x-1 rotate-180' : 'group-hover:translate-x-1'}`} />
               </div>

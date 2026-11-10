@@ -53,7 +53,7 @@ function JourneysContent() {
             </div>
 
             {/* Details Side */}
-            <div className="w-full lg:w-1/2 flex flex-col gap-6 text-start">
+            <div className="w-full lg:w-1/2 flex flex-col gap-6 text-start flex-grow justify-between">
               <div className="text-start">
                 <span className="text-xs uppercase tracking-[0.3em] text-gold-400 font-medium block mb-2">
                   {journey.location}

@@ -62,12 +62,12 @@ function VillasContent() {
 
               {/* Body Content */}
               <div className="p-5 sm:p-8 flex flex-col flex-grow justify-between gap-6 text-start">
-                <p className="text-sand-200/80 text-sm font-light leading-relaxed text-start">
+                <p className="text-sand-200/80 text-sm font-light leading-relaxed text-start min-h-[4rem]">
                   {villa.tagline}
                 </p>
 
                 {/* Specs Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-xl bg-emerald-950/70 border border-gold-500/15 text-xs text-sand-200/90 font-light text-start">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-xl bg-emerald-950/70 border border-gold-500/15 text-xs text-sand-200/90 font-light text-start min-h-[6.5rem]">
                   <div className="flex items-center gap-2">
                     <BedDouble className="w-4 h-4 text-gold-400 flex-shrink-0" />
                     <span>{villa.bedrooms}</span>
@@ -87,7 +87,7 @@ function VillasContent() {
                 </div>
 
                 {/* Amenities Badges */}
-                <div className="text-start">
+                <div className="text-start min-h-[4rem]">
                   <span className="text-[10px] uppercase tracking-widest text-gold-400 font-semibold block mb-2 text-start">
                     {pageData.amenitiesLabel}
                   </span>
@@ -101,7 +101,7 @@ function VillasContent() {
                 </div>
 
                 {/* Price & Action */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-gold-500/20">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-gold-500/20 mt-auto">
                   <div className="text-start">
                     <span className="text-[10px] text-sand-200/50 uppercase tracking-widest block">{isRTL ? 'תעריף ללילה' : 'Nightly Tariff'}</span>
                     <bdi className="font-serif text-2xl text-gold-300 font-semibold">{villa.rate}</bdi>

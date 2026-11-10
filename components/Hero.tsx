@@ -38,7 +38,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16">
       {/* Background with Dark Luxe Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2400&q=85"
           alt="Luxury Resort Bali Indonesia"
@@ -61,7 +61,7 @@ export default function Hero() {
         {/* Hero Title */}
         <h1
           ref={titleRef}
-          className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight text-sand-50 font-light leading-[1.08] mb-8"
+          className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-sand-50 font-light leading-[1.08] mb-8 text-center"
         >
           {t.hero.titleLine1} <br />
           <span className="italic font-normal bg-gradient-to-r from-gold-300 via-gold-400 to-amber-200 bg-clip-text text-transparent">

@@ -17,13 +17,26 @@ body {
   text-align: start;
 }
 
-/* Ensure RTL text and icons align correctly */
-[dir="rtl"] {
-  text-align: right;
+/* Ensure clean, crisp text alignment for both languages */
+html[dir="ltr"],
+html[dir="ltr"] body {
+  text-align: left;
+  direction: ltr;
 }
 
-[dir="ltr"] {
-  text-align: left;
+html[dir="rtl"],
+html[dir="rtl"] body {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Keep centered sections strictly centered in both languages */
+.text-center {
+  text-align: center !important;
+}
+
+.text-start {
+  text-align: start !important;
 }
 
 /* Prevent BiDi text jumble in currency & numbers */
